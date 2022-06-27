@@ -29,3 +29,4 @@ urlpatterns = [
 ]
 urlpatterns = urlpatterns + \
     static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# to save the uploaded picture to a folder determined in the setting.py file
