@@ -1,0 +1,54 @@
+<div class="home_slider_container">
+    <div class="owl-carousel owl-theme home_slider">
+
+        <!-- Slide -->
+        <div class="owl-item">
+            <div class="home_slider_content_container">
+                <div class="container">
+                    <div class="home_search">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="home_search_container"><br><br><br><br><br><br><br><br><br><br>
+                                        <div class="home_search_title"><font color="red">Login</font></div>
+                                        <div class="home_search_content">
+                                            <form method="POST" action="login" class="home_search_form" id="home_search_form">
+                                                {%csrf_token%}
+                                                <div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+                                                    <table  align="center" class="table" style="width:900px;background-color:#5499C7">
+                                                        <tr>
+                                                            <th><font color="white">Username<span aria-hidden="true" class="required" >*</span></font></th>
+                                                            <td><input type="text" name="username" class="form-control" required="" style="width:90%;height: 40px"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th><font color="white">Password<span aria-hidden="true" class="required" >*</span></font></th>
+                                                        <td><input type="password" name="password" class="form-control" required="" style="width:90%;height: 40px"></td>
+                                                    </tr>
+                                                        <tr>
+                                                            <td colspan="2" align="center"><b><button type="submit" class="btn" name="submit"><font color="#2E86C1 "><b>SUBMIT</b></font></button></b></td>
+                                                        </tr>
+                                                    </table>
+                                                    <div>
+                                                        {% for message in messages %}
+                                                        <font color="red"><h3> {{message}} </h3></font>
+                                                        {% endfor %}
+                                                    </div>
+                                                    <a href='reg'>Register</a>
+                                                    <br>
+                                                    <a href='/'>Go Back</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div class="home_slider_container">
+    <div class="owl-carousel owl-theme home_slider">
+    </div>
+</div>

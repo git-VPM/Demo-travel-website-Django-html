@@ -1,0 +1,59 @@
+<div class="home_search">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="home_search_container">
+                    <div class="home_search_title"><font color="#21618C"><b>Register</b></font></div>
+                    <div class="home_search_content">
+                        <form method="POST" action="register" class="home_search_form" id="home_search_form">
+                            {%csrf_token%}
+                            <div class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+                                <table align="center" class="table" style="width:1200px;height: 500px;background-color:#5499C7 ">
+                                    
+                                    <tr>
+                                        <th><font color="white">User Name</font></th>
+                                        <td><input type="text" name="username" class="form-control" required="" style="width:100%;height: 40px"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><font color="white">First Name</font></th>
+                                        <td><input type="text" name="fname" class="form-control" required="" style="width:100%;height: 40px"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><font color="white">Last Name</font></th>
+                                        <td><input type="text" name="lname" class="form-control" required="" style="width:100%;height: 40px"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><font color="white">Password</font></th>
+                                        <td><input type="password" name="password1" class="form-control" required="" style="width:100%;height: 40px"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><font color="white">Confirm Password</font></th>
+                                        <td><input type="password" name="password2" class="form-control" required="" style="width:100%;height: 40px"></td>
+                                    </tr>
+                                    <tr>
+                                        <th><font color="white">Email</font></th>
+                                        <td><input type="email" name="email" class="form-control" required="" style="width:100%;height: 40px" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" align="center"><b><button type="submit" class="btn" name="submit"><font color="#2E86C1 "><b>SUBMIT</b></font></button></b></td>
+                                    </tr>
+                                </table>
+                                <a href='log'>Login</a>
+                                <br>
+                                <a href='/'>Go Back</a>
+                                <div>
+                                    {% for message in messages %}
+                                    <h3> {{message}} </h3>
+                                    {% endfor %}
+                                </div><br><br><br><br><br><br><br><br>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
